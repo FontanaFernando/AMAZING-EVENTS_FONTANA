@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* -----------------------NAVBAR----------------------- */
+
+
+li{
+    padding: .75rem .5rem;
+}
+
+.nav-link:hover{
+    background-color: rgb(206, 206, 206);
+    border-radius: 5px;
+}
+
+#active{
+    background-color: rgb(228, 228, 228);
+    border-radius: 5px;
+}
+
+
+/* -----------------------CAROUSEL----------------------- */
+
+
+.carousel-inner{
+    height: 25rem;
+    align-items: center;
+}
+
+
+/* -----------------------SEARCHBAR----------------------- */
+
+
+.searchbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 4rem;
+}
+
+.d-flex{
+    display: flex;
+    flex-direction: row;
+    width: 35rem;
+}
+
+
+/* -----------------------CARDS----------------------- */
+
+
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.card{
+    height: 50vh;
+    width: 30vw !important;
+}
+
+.btnPrice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card-img-top{
+    height: 10rem;
+    object-fit: cover;
+}
+
+
+/* -----------------------FORM----------------------- */
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+form>div{
+    width: 40rem;
+}
+
+
+/* -----------------------TABLE----------------------- */
+
+
+#table{
+    display: flex;
+    justify-content: center;
+    padding: 6rem 4rem 1rem;
+}
+
+table{
+    border: none;
+}
+
+thead{
+    background-color: grey;
+    border: none;
+    border: 1px whitesmoke solid;
+}
+
+tbody{
+    background-color: lightgray;
+}
+
+th, td{
+    border: none;
+    border: 1px whitesmoke solid;
+}
+
+td{
+    background-color: whitesmoke !important;
+    border: none;
+    border: 1px lightgrey solid;
+}
+
+
+/* -----------------------DETAILS----------------------- */
+
+
+#details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.col-md-4 > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* -----------------------FOOTER----------------------- */
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 4rem 3rem;
+}
+
+.mediaIcons{
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* -----------------------MEDIA----------------------- */
+
+
+@media(max-width: 992px){
+    .carousel-inner{
+        height: 15rem;
+    }
+    .d-flex{
+        width: 15rem;
+    }
+    .searchbar{
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        padding: .5rem 1rem;
+    }
+    .d-flex{
+        /* display: flex;
+        flex-direction: row; */
+        width: 30rem;
+    }    
+}
+
+@media(max-width: 768px){
+    .tarjetas{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 576px){
+    .carousel-inner{
+        height: 5rem;
+    }
+    .d-flex{
+        flex-wrap: wrap;
+        width: auto;
+    }   
+}
