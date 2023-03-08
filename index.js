@@ -1,12 +1,12 @@
+
 const cardsContainer = document.querySelector('.tarjetas')
 
-cardsAlgo(data, cardsContainer)
+cardsAlgo (data, cardsContainer)
 
 function cardsAlgo(arrayData, container) {
-    let cards = ''
-    for (const event of arrayData.events) {
-        if (event.date <= arrayData.currentDate) {
-            cards += `<div>
+let cards = ''
+for (const event of arrayData.events) {
+    cards += `<div>
                     <div class="card" style="width: 18rem;">
                         <img src="${event.image}" class="card-img-top" alt="${event.name}">
                         <div class="card-body">
@@ -22,7 +22,6 @@ function cardsAlgo(arrayData, container) {
                         </div>
                     </div>
                 </div>`
-        }
-    }
-    container.innerHTML = cards
+}
+container.innerHTML = cards    
 }

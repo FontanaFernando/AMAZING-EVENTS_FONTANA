@@ -193,6 +193,7 @@ footer{
         flex-direction: column;
     }
     .tarjetas .card{
+        height: 100% !important;
         width: auto !important;
     }
 }
