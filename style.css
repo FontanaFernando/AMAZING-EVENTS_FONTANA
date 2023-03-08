@@ -58,12 +58,12 @@ li{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    gap: .5rem;
+    gap: 2rem;
 }
 
 .tarjetas .card{
-    height: 50vh;
-    width: 30vw !important;
+    height: 40vh;
+    width: 18vw !important;
 }
 
 .tarjetas .btnPrice{
