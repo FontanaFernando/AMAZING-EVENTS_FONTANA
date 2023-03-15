@@ -14,13 +14,13 @@
 
 <body>
 
-        <!-- /* NAVBAR */ -->
+    <!-- /* NAVBAR */ -->
 
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/image/Logo_Amazing_Events.png" alt="Logo" height="24">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/image/Logo_Amazing_Events.png" alt="Logo" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -50,77 +50,84 @@
         </nav>
     </header>
 
-    <!-- /* CAROUSEL */ -->
+    <main>
 
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./assets/image/Cinema.jpg" class="d-block w-100" alt="Cinema">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Costume_Party.jpg" class="d-block w-100" alt="Costume Party">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Food_Fair.jpg" class="d-block w-100" alt="Food Fair">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Marathon.jpg" class="d-block w-100" alt="Marathon">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Museum_Tour.jpg" class="d-block w-100" alt="Museum Tour">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Music_Concert.jpg" class="d-block w-100" alt="Music Concert">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        <!-- /* CAROUSEL */ -->
 
-    <!-- /* FORM */ -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <h2 class="carouselTitle">CONTACT</h2>
+            <div class="carousel-inner carousel-fade">
+                <div class="carousel-item slide active">
+                    <img src="./assets/image/Cinema.jpg" class="d-block w-100" alt="Cinema">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Costume_Party.jpg" class="d-block w-100" alt="Costume Party">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Food_Fair.jpg" class="d-block w-100" alt="Food Fair">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Marathon.jpg" class="d-block w-100" alt="Marathon">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Museum_Tour.jpg" class="d-block w-100" alt="Museum Tour">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Music_Concert.jpg" class="d-block w-100" alt="Music Concert">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
-    <form>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Name">
-            <label for="floatingInput">Name</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInputemail" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Comments</label>
-        </div>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </form>
+        <!-- /* FORM */ -->
 
-    <!-- /* FOOTER */ -->
+        <form>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Name">
+                <label for="floatingInput">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInputemail" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Comments</label>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+
+    </main>
+
+    <!-- /*  FOOTER  */ -->
 
     <footer>
         <div class="mediaIcons">
-            <a class="footer-brand" href="#"><img src="assets/icons/facebook.svg" alt="Facebook" width="30"
-                    height="24"></a>
-            <a class="footer-brand" href="#"><img src="assets/icons/instagram.svg" alt="Instagram" width="30"
-                    height="24"></a>
-            <a class="footer-brand" href="#"><img src="assets/icons/twitter.svg" alt="Twitter" width="30"
-                    height="24"></a>
+            <a class="footer-brand" href="https://es-la.facebook.com/"><img src="./assets/icons/facebook.svg"
+                    alt="Facebook" width="30" height="24"></a>
+            <a class="footer-brand" href="https://www.instagram.com/"><img src="./assets/icons/instagram.svg"
+                    alt="Instagram" width="30" height="24"></a>
+            <a class="footer-brand" href="https://twitter.com/?lang=es"><img src="./assets/icons/twitter.svg"
+                    alt="Twitter" width="30" height="24"></a>
         </div>
         <div>
             <h3>Amazing Event</h3>
         </div>
     </footer>
+
+    <!-- /*  JAVASCRIPT  */ -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

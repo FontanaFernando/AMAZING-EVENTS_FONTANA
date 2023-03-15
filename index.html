@@ -14,13 +14,14 @@
 
 <body>
 
+
     <!-- /*  NAVBAR  */ -->
 
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./assets/image/Logo_Amazing_Events.png" alt="Logo" height="24">
+                    <img src="./assets/image/Logo_Amazing_Events.png" alt="Logo" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -50,101 +51,86 @@
         </nav>
     </header>
 
-    <!-- /*  CAROUSEL  */ -->
+    <main>
 
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./assets/image/Cinema.jpg" class="d-block w-100" alt="Cinema">
+        <!-- /*  CAROUSEL  */ -->
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <h2 class="carouselTitle">HOME</h2>
+            <div class="carousel-inner carousel-fade">
+                <div class="carousel-item slide active">
+                    <img src="./assets/image/Cinema.jpg" class="d-block w-100" alt="Cinema">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Costume_Party.jpg" class="d-block w-100" alt="Costume Party">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Food_Fair.jpg" class="d-block w-100" alt="Food Fair">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Marathon.jpg" class="d-block w-100" alt="Marathon">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Museum_Tour.jpg" class="d-block w-100" alt="Museum Tour">
+                </div>
+                <div class="carousel-item slide">
+                    <img src="./assets/image/Music_Concert.jpg" class="d-block w-100" alt="Music Concert">
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Costume_Party.jpg" class="d-block w-100" alt="Costume Party">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Food_Fair.jpg" class="d-block w-100" alt="Food Fair">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Marathon.jpg" class="d-block w-100" alt="Marathon">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Museum_Tour.jpg" class="d-block w-100" alt="Museum Tour">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/image/Music_Concert.jpg" class="d-block w-100" alt="Music Concert">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    
+
+        <!-- /*  SEARCHBAR  */ -->
+
+        <div class="searchbar">
+            <div class="inputsCategory"></div>
+            <div class="textbar">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
-    <!-- /*  SEARCHBAR  */ -->
+        <!-- /*  CARDS  */ -->
 
-    <div class="searchbar">
+        <div class="tarjetas"></div>
+
+    </main>
+
+    <!-- /*  FOOTER  */ -->
+
+    <footer>
+        <div class="mediaIcons">
+            <a class="footer-brand" href="https://es-la.facebook.com/"><img src="./assets/icons/facebook.svg"
+                    alt="Facebook" width="30" height="24"></a>
+            <a class="footer-brand" href="https://www.instagram.com/"><img src="./assets/icons/instagram.svg"
+                    alt="Instagram" width="30" height="24"></a>
+            <a class="footer-brand" href="https://twitter.com/?lang=es"><img src="./assets/icons/twitter.svg"
+                    alt="Twitter" width="30" height="24"></a>
+        </div>
         <div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">category</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">category</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                <label class="form-check-label" for="inlineCheckbox3">category</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                <label class="form-check-label" for="inlineCheckbox3">category</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                <label class="form-check-label" for="inlineCheckbox3">category</label>
-            </div>
+            <h3>Amazing Event</h3>
         </div>
-        <div>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
+    </footer>
 
-    <!-- /*  CARDS  */ -->
+    <!-- /*  JAVASCRIPT  */ -->
 
-    <div class="tarjetas">
-    </div>
-
-        <!-- /*  FOOTER  */ -->
-
-        <footer>
-            <div class="mediaIcons">
-                <a class="footer-brand" href="#"><img src="./assets/icons/facebook.svg" alt="Facebook" width="30"
-                        height="24"></a>
-                <a class="footer-brand" href="#"><img src="./assets/icons/instagram.svg" alt="Instagram" width="30"
-                        height="24"></a>
-                <a class="footer-brand" href="#"><img src="./assets/icons/twitter.svg" alt="Twitter" width="30"
-                        height="24"></a>
-            </div>
-            <div>
-                <h3>Amazing Event</h3>
-            </div>
-        </footer>
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"></script>
-        <script src="./data.js"></script>
-        <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./JS/data.js"></script>
+    <script src="./JS/index.js"></script>
 </body>
 
 </html>
