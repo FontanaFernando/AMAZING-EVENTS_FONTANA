@@ -28,7 +28,6 @@ li{
 
 #active{
     background-color: #ff8cb8;
-/*     text-align: center; */
     border-radius: 5px;
 }
 
@@ -196,11 +195,16 @@ form{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 3rem;
+    padding: 4rem 0 2rem 0;
 }
 
 form>div{
-    width: 40rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form-control{
+    width:40rem;
 }
 
 
@@ -287,6 +291,9 @@ footer{
 
 
 @media(max-width: 992px){
+    .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+        padding-left: 1rem;
+    }
     .carouselTitle{
         font-size: 3rem;
         top: 35%;
@@ -300,12 +307,12 @@ footer{
         gap: 0.5rem;
     }
     .form-control{
-        width: auto !important;
+        width: 30rem;
     }
     .d-flex{
         width: 30rem;
     }
-        .tarjetas{
+    .tarjetas{
         display: flex;
         flex-direction: column;
     }
@@ -330,6 +337,9 @@ footer{
     .carousel-inner{
         height: 5rem;
     }
+    .form-control{
+        width: 25rem;
+    }
     .d-flex{
         flex-wrap: wrap;
         width: auto;
@@ -337,6 +347,9 @@ footer{
 }
 
 @media(max-width: 450px){
+    .form-control{
+        width: 15rem;
+    }
     .details .card-body{
         padding: 2rem;
     }
