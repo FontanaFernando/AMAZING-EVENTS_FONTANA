@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(0deg, #e41765, #ffa1c5, #ffffff)
+    background: linear-gradient(0deg, #e41765, #ffa1c5, #ffdbe9, #ffffff)
   }
 
 
@@ -69,8 +69,11 @@ li{
     padding: .5rem 4rem;
 }
 
+.textbar{
+    margin-top: -2rem;
+}
+
 .d-flex{
-    display: flex;
     flex-direction: row;
     width: 35rem;
 }
@@ -211,7 +214,7 @@ form>div{
 /* -----------------------TABLE----------------------- */
 
 
-#table{
+#tableContainer{
     display: flex;
     justify-content: center;
     padding: 6rem 4rem 1rem;
@@ -222,24 +225,24 @@ table{
 }
 
 thead{
-    background-color: grey;
+    background-color: #e41765;
     border: none;
-    border: 1px whitesmoke solid;
+    border: 1px #e41765 solid;
 }
 
 tbody{
-    background-color: lightgray;
+    background-color: #ffdbe9;
 }
 
 th, td{
     border: none;
-    border: 1px whitesmoke solid;
+    border: 1px #e41765 solid;
 }
 
 td{
-    background-color: whitesmoke !important;
+    background-color: #ffa1c5 !important;
     border: none;
-    border: 1px lightgrey solid;
+    border: 1px #e41765 solid;
 }
 
 
@@ -251,6 +254,7 @@ td{
     justify-content: center;
     align-items: center;
     padding: 3rem;
+    height: 80vh;
 }
 
 .details .card-body{
