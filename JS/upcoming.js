@@ -6,7 +6,7 @@ function cardsPrint(arrayData, container, currentDate) {
     let cards = '';
     const filteredEvents = arrayData.filter(event => event.date >= currentDate);
     if (filteredEvents.length === 0) {
-        cards = '<h2 style="margin-top: 50px; height: 15vh; text-align: center;">No events found</h2>';
+        cards = '<h2 style="margin-top: 50px; height: 15vh; text-align: center;">events not found!</h2>';
     } else {
         filteredEvents.forEach((event) => {
             cards += `<div>

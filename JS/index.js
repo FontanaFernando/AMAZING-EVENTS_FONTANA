@@ -23,7 +23,7 @@ function cardsPrint(arrayData, container) {
                 </div>`;
     });
     if (arrayData.length === 0) {
-        cards = '<h2 style="margin-top: 50px; height: 15vh; text-align: center;">No events found</h2>';
+        cards = '<h2 style="margin-top: 50px; height: 15vh; text-align: center;">events not found!</h2>';
     }      
     container.innerHTML = cards;
 }

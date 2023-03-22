@@ -217,10 +217,13 @@ form>div{
 #tableContainer{
     display: flex;
     justify-content: center;
-    padding: 6rem 4rem 1rem;
+    padding: 4rem 4rem 1rem;
+
 }
 
 table{
+    text-align: start;
+    width: 90vw;
     border: none;
 }
 
@@ -231,15 +234,19 @@ thead{
 }
 
 tbody{
+    text-align: center;
     background-color: #ffdbe9;
 }
 
-th, td{
+th{
+    padding: .5rem;
+    padding-left: 1rem;
     border: none;
     border: 1px #e41765 solid;
 }
 
 td{
+    padding: .5rem;
     background-color: #ffa1c5 !important;
     border: none;
     border: 1px #e41765 solid;

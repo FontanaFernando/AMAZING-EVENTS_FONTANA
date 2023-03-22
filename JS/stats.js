@@ -1,99 +1,118 @@
-const tableContainer = document.querySelector('#tableContainer');
+async function fetchApiTableEvents() {
+    try {
+        let data = await fetch(
+            "https://mindhub-xj03.onrender.com/api/amazing?time=past"
+        );
+        data = await data.json();
+        let events = data.events;
 
-function filterEvents(arrayData) {
-    let maxAssistanceEvent = null;
-    let minAssistanceEvent = null;
-    let maxCapacityEvent = null;
+        const filteredEventsPast = events.filter(event => event.assistance);
+        filteredEventsPast.map(event => {
+            event.porcentajeAsistencia = event.assistance * 100 / event.capacity
+            event.revenues = event.price * event.assistance
+        })
+        
+        let eventHighestPercentage = [...events].sort((a, b) => a.capacity - b.capacity)
 
-    arrayData.forEach((event) => {
-        const percentage = (event.assistance / event.capacity) * 100;
+        let maxEventCapacity = eventHighestPercentage[eventHighestPercentage.length -1]
 
-        if (!maxAssistanceEvent || event.assistance > maxAssistanceEvent.assistance) {
-            maxAssistanceEvent = event;
-        }
+        let eventPercentage = [...filteredEventsPast].sort((a, b) => a.porcentajeAsistencia - b.porcentajeAsistencia)
 
-        if (!minAssistanceEvent || event.assistance < minAssistanceEvent.assistance) {
-            minAssistanceEvent = event;
-        }
+        let maxEventPercentage = eventPercentage[eventPercentage.length -1]
+        let minEventPercentage = eventPercentage[0]
+        
+        const tableEvents = document.getElementById("tableEvents")
+        tableEvents.innerHTML += `
+                                    <td>${maxEventPercentage.name} - ${maxEventPercentage.porcentajeAsistencia}</td>
+                                    <td>${minEventPercentage.name} - ${minEventPercentage.porcentajeAsistencia}</td>
+                                    <td>${maxEventCapacity.name} - ${maxEventCapacity.capacity} peoples</td>
+                                `;
+    }
 
-        if (!maxCapacityEvent || event.capacity > maxCapacityEvent.capacity) {
-            maxCapacityEvent = event;
-        }
-    });
-
-    return {
-        maxAssistanceEvent,
-        minAssistanceEvent,
-        maxCapacityEvent,
-    };
+    catch (error) {
+        console.log("Error:", error);
+    }
 }
 
-function tablePrint(arrayData, container) {
-    let table = '';
-    arrayData.forEach((event) => {
-        table = `<table class="table">
-                        <thead>
-                            <tr>
-                                <th colspan="3">Events Statistics</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>Events with the highest percentage of attendance</th>
-                                <th>Events with the lowest percentage of attendance</th>
-                                <th>Events with larger capacity</th>
-                            </tr>
-                            <tr>
-                                <td>${filterEvents(arrayData).maxAssistanceEvent.name}</td>
-                                <td>${filterEvents(arrayData).minAssistanceEvent.name}</td>
-                                <td>${filterEvents(arrayData).maxCapacityEvent.name}</td>
-                            </tr>
-                            <tr>
-                                <th colspan="3">Upcoming events statistics by category</th>
-                            </tr>
-                            <tr>
-                                <th>Categories</th>
-                                <th>Revenues</th>
-                                <th>Percentage of attendance</th>
-                            </tr>
-                            <tr>
-                                <td>data4</td>
-                                <td>data5</td>
-                                <td>data6</td>
-                            </tr>
-                            <tr>
-                                <th colspan="3">Past events statistics by category</th>
-                            </tr>
-                            <tr>
-                                <th>Categories</th>
-                                <th>Revenues</th>
-                                <th>Percentage of attendance</th>
-                            </tr>
-                            <tr>
-                                <td>data13</td>
-                                <td>data14</td>
-                                <td>data15</td>
-                            </tr>
+fetchApiTableEvents();
 
-                        </tbody>
-                    </table>`;
-    });
-    container.innerHTML = table;
-}
+/*==============================================================================*/
 
-fetch('https://mindhub-xj03.onrender.com/api/amazing')
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data)
-        tablePrint(data.events, tableContainer);
-        filterEvents(data.events)
+async function fetchApiTableUpcoming() {
+    try {
+        const response = await fetch(
+            "https://mindhub-xj03.onrender.com/api/amazing?time=upcoming"
+        );
+        let data = await response.json();
+        let events = data.events;
+
+        const filteredEventsUpcoming = events.filter(event => event.estimate);
+        filteredEventsUpcoming.map(event => {
+            event.porcentajeAsistencia = event.estimate * 100 / event.capacity
+            event.revenues = event.price * event.estimate
+        })
+        let eventFilterCategory = [... new Set(filteredEventsUpcoming.map(event => event.category))]
+        eventFilterCategory.forEach(category => {
+            let capacity = 0
+            let estimate = 0
+            let revenues = 0
+            filteredEventsUpcoming.forEach(event => {
+                if (event.category == category){
+                    capacity += event.capacity
+                    estimate += event.estimate
+                    revenues += event.revenues
+                }})
+
+                const tableUpcoming = document.getElementById("tableUpcoming")
+                tableUpcoming.innerHTML += `
+                                            <td>${category} </td>
+                                            <td>${revenues}</td>
+                                            <td>${(estimate * 100 / capacity).toFixed(2)}%</td>
+                                            `;
     })
-    .catch((error) => console.error(error))
+    } catch (error) {
+        console.log("Error:", error);
+    }
+}
 
-/* fetch('./JS/data.json')
-.then((res) => res.json())
-.then((data) => {
-    console.log(data)
-    tablePrint(data.events, tableContainer);
-})
-.catch((error) => console.error(error)) */
+fetchApiTableUpcoming();
+
+/*==============================================================================*/
+
+async function fetchApiTablePast() {
+    try {
+        let data = await fetch(
+            "https://mindhub-xj03.onrender.com/api/amazing?time=past"
+        );
+        data = await data.json();
+        let events = data.events;
+
+        const filteredEventsPast = events.filter(event => event.assistance);
+        filteredEventsPast.map(event => {
+            event.porcentajeAsistencia = event.assistance * 100 / event.capacity
+            event.revenues = event.price * event.assistance
+        })
+        let eventFilterCategory = [... new Set(filteredEventsPast.map(event => event.category))]
+        eventFilterCategory.forEach(category => {
+            let capacity = 0
+            let assistance = 0
+            let revenues = 0
+            filteredEventsPast.forEach(event => {
+                if (event.category == category){
+                    capacity += event.capacity
+                    assistance += event.assistance
+                    revenues += event.revenues
+                }})
+                const tablePast = document.getElementById("tablePast")
+                tablePast.innerHTML += `
+                                            <td>${category} </td>
+                                            <td>${revenues}</td>
+                                            <td>${(assistance * 100 / capacity).toFixed(2)}%</td>
+                                    `;
+    })
+    } catch (error) {
+        console.log("Error:", error);
+    }
+}
+
+fetchApiTablePast();
