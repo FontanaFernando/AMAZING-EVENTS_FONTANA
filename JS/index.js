@@ -24,7 +24,7 @@ function cardsPrint(arrayData, container) {
     });
     if (arrayData.length === 0) {
         cards = '<h2 style="margin-top: 50px; height: 15vh; text-align: center;">events not found!</h2>';
-    }      
+    }
     container.innerHTML = cards;
 }
 
@@ -53,6 +53,7 @@ function filterEvents(arrayData, container, cardsContainer) {
                     events: arrayData.filter((event) => checkedCategories.includes(event.category)),
                 };
                 cardsPrint(filteredData.events, cardsContainer);
+                searchEvents(filteredData.events, searchForm, cardsContainer);
             } else {
                 cardsPrint(arrayData, cardsContainer);
             }
